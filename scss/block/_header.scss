@@ -1,0 +1,110 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 30px 0;
+  background: $white;
+}
+.site-header__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+.site-header__form-control {
+  max-width: 700px;
+  width: 100%;
+}
+.site-header__form-control input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $blueviolet;
+  border-radius: 25px;
+  padding: 13px 17px;
+  font-family: $main-font;
+  font-weight: normal;
+  font-size: 18px;
+  background: $white;
+  color: $blueviolet;
+  &::placeholder {
+    letter-spacing: 0.7px;
+    color: $blueviolet;
+  }
+  &:focus {
+    border-bottom: none;
+    background: $blueviolet;
+    color: $white;
+    &::placeholder {
+      color: $white;
+    }
+    transition: 0.4s;
+  }
+}
+.site-header__form-control input::-webkit-search-cancel-button {
+  display: none;
+}
+.site-header__form-btn {
+  max-width: 115px;
+  width: 100%;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $blueviolet;
+  border-radius: 20px;
+  padding: 10px 17px;
+  background: $white;
+  color: $blueviolet;
+  cursor: pointer;
+  &:hover {
+    border-bottom: none;
+    background: $blueviolet;
+    color: $white;
+    transition: 0.4s;
+  }
+}
+.translation-select {
+  max-width: 150px;
+  width: 100%;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $blueviolet;
+  border-radius: 20px;
+  padding: 10px 17px;
+  background: $white;
+  color: $blueviolet;
+  cursor: pointer;
+  &:hover {
+    border-bottom: none;
+    background: $blueviolet;
+    color: $white;
+    transition: 0.4s;
+  }
+}
+option {
+  outline: none;
+  border: none;
+  background: $white;
+  color: $blueviolet;
+}
+
+@media only screen and (max-width: 700px) {
+  .site-header__form {
+    flex-direction: column;
+  }
+  .translation-select {
+    max-width: 500px;
+  }
+  .site-header__form-btn {
+    max-width: 300px;
+  }
+}

@@ -46,7 +46,7 @@ p {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -57,4 +57,302 @@ img {
   width: 100%;
   height: auto;
   display: inline-block;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 30px 0;
+  background: #fff;
+}
+
+.site-header__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px;
+}
+
+.site-header__form-control {
+  max-width: 700px;
+  width: 100%;
+}
+
+.site-header__form-control input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #8a2be2;
+  border-radius: 25px;
+  padding: 13px 17px;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  background: #fff;
+  color: #8a2be2;
+}
+.site-header__form-control input::-webkit-input-placeholder {
+  letter-spacing: 0.7px;
+  color: #8a2be2;
+}
+.site-header__form-control input::-moz-placeholder {
+  letter-spacing: 0.7px;
+  color: #8a2be2;
+}
+.site-header__form-control input:-ms-input-placeholder {
+  letter-spacing: 0.7px;
+  color: #8a2be2;
+}
+.site-header__form-control input::-ms-input-placeholder {
+  letter-spacing: 0.7px;
+  color: #8a2be2;
+}
+.site-header__form-control input::placeholder {
+  letter-spacing: 0.7px;
+  color: #8a2be2;
+}
+.site-header__form-control input:focus {
+  border-bottom: none;
+  background: #8a2be2;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.site-header__form-control input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+.site-header__form-control input:focus::-moz-placeholder {
+  color: #fff;
+}
+.site-header__form-control input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+.site-header__form-control input:focus::-ms-input-placeholder {
+  color: #fff;
+}
+.site-header__form-control input:focus::placeholder {
+  color: #fff;
+}
+
+.site-header__form-control input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.site-header__form-btn {
+  max-width: 115px;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #8a2be2;
+  border-radius: 20px;
+  padding: 10px 17px;
+  background: #fff;
+  color: #8a2be2;
+  cursor: pointer;
+}
+.site-header__form-btn:hover {
+  border-bottom: none;
+  background: #8a2be2;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.translation-select {
+  max-width: 150px;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #8a2be2;
+  border-radius: 20px;
+  padding: 10px 17px;
+  background: #fff;
+  color: #8a2be2;
+  cursor: pointer;
+}
+.translation-select:hover {
+  border-bottom: none;
+  background: #8a2be2;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+option {
+  outline: none;
+  border: none;
+  background: #fff;
+  color: #8a2be2;
+}
+
+@media only screen and (max-width: 700px) {
+  .site-header__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .translation-select {
+    max-width: 500px;
+  }
+  .site-header__form-btn {
+    max-width: 300px;
+  }
+}
+.hero {
+  padding-top: 88px;
+}
+
+.hero__message {
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  border: 1px solid #8a2be2;
+  border-radius: 40px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 0;
+  margin: 70px auto;
+  margin-top: 120px;
+  padding: 20px;
+}
+.hero__message:hover {
+  background: #8a2be2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.hero__message:hover .hero__message-text {
+  color: #fff;
+}
+.hero__message:hover .hero__message-copy svg {
+  color: #fff;
+}
+
+.hero__message-text {
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+  color: #8a2be2;
+}
+
+.hero__message-copy svg {
+  width: 20px;
+  height: 20px;
+  color: #8a2be2;
+  cursor: pointer;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+}
+
+.loader::before {
+  content: "";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #8a2be2;
+  -webkit-animation: prixClipFix 2s linear infinite;
+          animation: prixClipFix 2s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes prixClipFix {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+@keyframes prixClipFix {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+@media only screen and (max-width: 820px) {
+  .hero__message {
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hero__message {
+    margin-top: 320px;
+  }
+  .loader__container {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -4,29 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/icon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="icon" href="./images/google-icon.png" />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Document</title>
+    <title>Google translate</title>
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__container">
-        <div class="site-header__block"></div>
+        <div class="site-header__block">
+          <form class="site-header__form">
+            <div class="site-header__form-control">
+              <input
+                type="search"
+                class="site-header__form-input"
+                name="search"
+                autocomplete="off"
+                placeholder="Google translate"
+                required />
+            </div>
+            <select name="translation" class="translation-select">
+              <option value="en">English</option>
+              <option value="ru">Russian</option>
+              <option value="zh">Chinese</option>
+              <option value="ko">Korean</option>
+              <option value="tr">Turkish</option>
+              <option value="ar">Arabic</option>
+              <option value="ps">Afghan</option>
+              <option value="uz">Uzbek</option>
+            </select>
+            <button type="submit" class="site-header__form-btn">
+              Translate
+            </button>
+          </form>
+        </div>
         <nav class="site-nav"></nav>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <div class="hero__block"></div>
+          <div class="hero__block">
+            <div class="hero__message">
+              <div class="loader__container"></div>
+              <p class="hero__message-text"></p>
+              <div class="hero__message-copy">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-copy"
+                  viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
