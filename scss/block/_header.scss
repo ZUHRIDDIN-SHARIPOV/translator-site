@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 30px;
+  gap: 40px;
 }
 .site-header__form-control {
   max-width: 700px;
@@ -97,7 +97,7 @@ option {
   color: $blueviolet;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 740px) {
   .site-header__form {
     flex-direction: column;
   }
