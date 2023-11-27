@@ -117,13 +117,13 @@ option {
   color: $blueviolet;
 }
 .translation__bottom-arrow svg {
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 27px;
   color: $blueviolet;
   position: absolute;
-  top: 8.8px;
+  top: 6.7px;
   right: 17px;
-  cursor: pointer;
+  cursor: progress;
 }
 .translation-select:hover + .translation__bottom-arrow svg {
   color: $white;
