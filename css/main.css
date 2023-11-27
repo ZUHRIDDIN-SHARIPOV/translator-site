@@ -187,13 +187,21 @@ img {
   transition: 0.4s;
 }
 
-.translation-select {
+.translation__block {
   max-width: 150px;
+  width: 100%;
+  position: relative;
+}
+
+.translation-select {
   width: 100%;
   font-family: sans-serif;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.7px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border: none;
   border-bottom: 1px solid #8a2be2;
@@ -218,6 +226,22 @@ option {
   color: #8a2be2;
 }
 
+.translation__bottom-arrow svg {
+  width: 20px;
+  height: 20px;
+  color: #8a2be2;
+  position: absolute;
+  top: 8.8px;
+  right: 17px;
+  cursor: pointer;
+}
+
+.translation-select:hover + .translation__bottom-arrow svg {
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 @media only screen and (max-width: 740px) {
   .site-header__form {
     -webkit-box-orient: vertical;
@@ -225,7 +249,7 @@ option {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .translation-select {
+  .translation__block {
     max-width: 500px;
   }
   .site-header__form-btn {

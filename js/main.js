@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
       messageNotification.classList.add("hero__message-notification-key");
       setTimeout(() => {
         messageNotification.classList.remove("hero__message-notification-key");
-      }, 1400);
+      }, 1500);
     }
   });
 });
