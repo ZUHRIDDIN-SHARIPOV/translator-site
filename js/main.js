@@ -52,7 +52,7 @@ translationForm.addEventListener("submit", (e) => {
     method: "POST",
     headers: {
       "content-type": "application/x-www-form-urlencoded",
-      "X-RapidAPI-Key": "5fd7907023msh19637a342b9f0f1p11409cjsnfc5029119030",
+      "X-RapidAPI-Key": "92d4c7fd3dmsh23cbcc9c64ffd45p1ce42ejsn0adf7e9159f0",
       "X-RapidAPI-Host": "translate281.p.rapidapi.com",
     },
     body: new URLSearchParams({
