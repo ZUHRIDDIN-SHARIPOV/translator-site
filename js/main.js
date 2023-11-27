@@ -1,8 +1,9 @@
 const translationForm = document.querySelector(".site-header__form");
 const translationInput = document.querySelector(".site-header__form-input");
+const closeLogo = document.querySelector(".site-header__form-logo svg");
 const translationSelect = document.querySelector(".translation-select");
 const translationOptions = document.querySelectorAll("option");
-const url = "https://translate281.p.rapidapi.com/";
+const url = "https://translate281.p.rapidapi.com";
 
 translationForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,7 +53,7 @@ translationForm.addEventListener("submit", (e) => {
     method: "POST",
     headers: {
       "content-type": "application/x-www-form-urlencoded",
-      "X-RapidAPI-Key": "92d4c7fd3dmsh23cbcc9c64ffd45p1ce42ejsn0adf7e9159f0",
+      "X-RapidAPI-Key": "4c350b5ed8msh6bebf2ae25d76d2p12c818jsn5d81e9b4f04c",
       "X-RapidAPI-Host": "translate281.p.rapidapi.com",
     },
     body: new URLSearchParams({
@@ -84,16 +85,39 @@ translationForm.addEventListener("submit", (e) => {
   fetchData();
 });
 
+translationInput.addEventListener("focus", () => {
+  translationInput.addEventListener("input", () => {
+    if (translationInput.value) {
+      closeLogo.style.display = "inline-block";
+      closeLogo.onclick = () => {
+        translationInput.value = "";
+        closeLogo.style.display = "none";
+      };
+    } else {
+      closeLogo.style.display = "none";
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const messageText = document.querySelector(".hero__message-text");
   const messageCopy = document.querySelector(".hero__message-copy");
+  const messageNotification = document.querySelector(
+    ".hero__message-notification"
+  );
 
   messageCopy.addEventListener("click", () => {
-    const range = document.createRange();
-    range.selectNode(messageText);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
+    if (messageText.textContent.length > 0) {
+      const range = document.createRange();
+      range.selectNode(messageText);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      messageNotification.classList.add("hero__message-notification-key");
+      setTimeout(() => {
+        messageNotification.classList.remove("hero__message-notification-key");
+      }, 1400);
+    }
   });
 });

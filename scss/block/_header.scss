@@ -16,6 +16,7 @@
 .site-header__form-control {
   max-width: 700px;
   width: 100%;
+  position: relative;
 }
 .site-header__form-control input {
   width: 100%;
@@ -24,6 +25,7 @@
   border-bottom: 1px solid $blueviolet;
   border-radius: 25px;
   padding: 13px 17px;
+  padding-right: 40px;
   font-family: $main-font;
   font-weight: normal;
   font-size: 18px;
@@ -37,14 +39,27 @@
     border-bottom: none;
     background: $blueviolet;
     color: $white;
+    transition: 0.4s;
     &::placeholder {
       color: $white;
     }
-    transition: 0.4s;
   }
 }
 .site-header__form-control input::-webkit-search-cancel-button {
   display: none;
+}
+.site-header__form-logo svg {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $blueviolet;
+  cursor: pointer;
+  display: none;
+}
+.site-header__form-control input:focus + .site-header__form-logo svg {
+  color: $white;
 }
 .site-header__form-btn {
   max-width: 115px;
